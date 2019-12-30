@@ -31,106 +31,23 @@ const osName = platform();
 const Persik1 = ({ id, go, fetchedUser }) => (
   <Panel id={id}>
     <PanelHeader>
-    Сервера
+    Информация
     </PanelHeader>
          
     <Tabbar>
-          <TabbarItem
+          <TabbarItem fill="#0000FF"
             onClick={go}
             data-to="home"
-          ><Icon28MarketOutline /></TabbarItem>
+          ><Icon28MarketOutline  /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik"
-          ><Icon28HelpOutline /></TabbarItem>
-          <TabbarItem
-            onClick={go}
-            data-to="persik1"
-          ><Icon28Game fill="#0000FF" /></TabbarItem>
-          <TabbarItem
-            onClick={go}
-            data-to="persik3"
           ><Icon28ArticleOutline /></TabbarItem>
           <TabbarItem
             onClick={go}
-            data-to="persik2"
-          ><Icon28SettingsOutline /></TabbarItem>
+            data-to="persik1"
+          ><Icon28HelpOutline fill="#0000FF" /></TabbarItem>
         </Tabbar>
-        <Group>
-        <Div>
-        <Button size="xl" component="a" href="https://vk.com/topic-184075993_40901326">Добавить свой TS3 сервер</Button> 
-        </Div>
-        </Group>
-        <Group title="Каталог серверов">
-        <Div>
-        <center>
-        <h3>ТС3 ГЕЙМЕРОВ</h3>
-        <br/>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <br/>
-        Айпи: <b>ABIDKAPLAY.vts3.pw</b><br/>
-        Версия: <u>от 3.1.10</u><br/>
-        Описание: <i>Сервер для общения геймеров и не только.</i>
-        <br/>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится сервер</b>
-        </Cell>
-        <Separator style={{ margin: '12px 0' }} />
-        <h3>TeamSpeak Ютуберов</h3>
-        <br/>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <br/>
-        Айпи: <b>DEM</b><br/>
-        Версия: <u>от 3.1.7</u><br/>
-        Описание: <i>TeamSpeak сервер Демастера и других ютуберов</i>
-        <br/>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится сервер</b>
-        </Cell>
-        <Separator style={{ margin: '12px 0' }} />
-        <h3>TeamSpeak Депоент</h3>
-        <br/>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <br/>
-        Айпи: <b>depoent.ruclan.ovh</b><br/>
-        Версия: <u>от 3.1.10</u><br/>
-        Описание: <i>Описание отсутствует.</i>
-        <br/>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится сервер</b>
-        </Cell>
-        <Separator style={{ margin: '12px 0' }} />
-        <h3>TeamSpeak Малых Ютуберов</h3>
-        <br/>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <br/>
-        Айпи: <b>185.211.244.109:10070</b><br/>
-        Версия: <u>от 3.1.10</u><br/>
-        Описание: <i>TeamSpeak для ютуберов, от самых маленьких, до больших</i>
-        <br/>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится сервер</b>
-        </Cell>
-        <Separator style={{ margin: '12px 0' }} />
-        <h3>Тут может быть ваш сервер</h3>
-        <br/>
-        <img src="https://5play.ru/uploads/posts/2019-07/1562315043_1.webp" width="270" />
-        <br/>
-        Айпи: <b>тут будет айпи</b><br/>
-        Версия: <u>тут будет версия</u><br/>
-        Описание: <i>Тут будет описание</i>
-        <br/>
-        <Cell asideContent={<Switch />}>
-           <b>Мне нравится сервер</b>
-        </Cell>
-        <Separator style={{ margin: '12px 0' }} />
-        <Button size="xl" component="a" href="#">Вверх</Button>
-        <br/>
-        <br/>
-        <br/>
-        </center>
-        </Div>
-        </Group>
        
   </Panel>
 );

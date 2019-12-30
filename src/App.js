@@ -19,8 +19,9 @@ import Persik from './panels/Persik';
 import Persik1 from './panels/Persik1';
 import Persik2 from './panels/Persik2';
 import Persik3 from './panels/Persik3';
-import Persik4 from './panels/Persik4';
+import Example from './panels/Example';
 import Persik5 from './panels/Persik5';
+import Persik4 from './panels/Persik5';
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
