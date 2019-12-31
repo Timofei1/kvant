@@ -52,9 +52,11 @@ const Home = ({ go, id, fetchedUser}) => (
         <br/>
         
         {fetchedUser &&
-          <Div className='center'>
-              Привет, {fetchedUser.first_name}! Добро пожаловать в сервис, в котором ты сможешь найти поздравления для друзей и близких!
-            </Div>}
+          <Div>
+              Привет, {fetchedUser.first_name}! Добро пожаловать в сервис, разработанный для помощи ученикам кванториума!
+            </Div>
+          }
+        
         
         <br/>
         </Group>
@@ -62,9 +64,7 @@ const Home = ({ go, id, fetchedUser}) => (
         <Example />
 
         </Group>
-        <center>
-        <iframe src="https://vk.com/kvantoriumizh?w=address-146322228" />
-        </center>
+        
 	</Panel>
 );
 

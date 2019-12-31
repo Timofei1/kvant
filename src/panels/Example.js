@@ -95,22 +95,23 @@ class Example extends React.Component {
                   </TabsItem>
            </HorizontalScroll>
           </Tabs>
-          {this.state.activeTab6 === 'all' ? <Div><center>
-          Тут будут задания IT</center></Div> : null }
+          {this.state.activeTab6 === 'all' ?
+          <Div>
+          <Group title="Полезные ссылки">
+          <Button component="a" href="#">Сообщество</Button>
+          </Group>
+          </Div>
+           : null }
 
           {this.state.activeTab6 === 'users' ?
           <Div>
+          <Group title="Полезные ссылки">
           <center>
-          Тут будут задания AR/VR<br/>
-          <Separator style={{ margin: '12px 0' }} />
-          
-          <h3>Тестовое задание</h3>
-          <b>Задача: Сделать что то, чтоб было как то.</b><br/>
-          <i>Дополнительно: тут будут доп. данные</i><br/>
-          <u/>Цена выполнения: 3 балла<u/><br/>
-          <Separator style={{ margin: '12px 0' }} />
+          <Button size="xl" component="a" href="#">Сообщество</Button>
           </center>
-          </Div> : null }
+          </Group>
+          </Div>
+           : null }
 
           {this.state.activeTab6 === 'groups' ? <Div><center>
           Тут будут задания Аэро</center></Div> : null }
