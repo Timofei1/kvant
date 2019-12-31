@@ -52,12 +52,11 @@ const Home = ({ go, id, fetchedUser}) => (
         <br/>
         
         {fetchedUser &&
-          <Group>
-          <Div>
-              Привет, {fetchedUser.first_name}! Добро пожаловать в сервис, разработанный для помощи ученикам кванториума!
-            </Div>
-          </Group>
-          }
+    <Group>
+     
+        {`${fetchedUser.first_name} ${fetchedUser.last_name}`}
+      
+    </Group>}
         
         
        
