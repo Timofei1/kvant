@@ -48,18 +48,19 @@ const Home = ({ go, id, fetchedUser}) => (
             data-to="persik1"
           ><Icon28HelpOutline /></TabbarItem>
         </Tabbar>
-        <Group>
+        
         <br/>
         
         {fetchedUser &&
+          <Group>
           <Div>
               Привет, {fetchedUser.first_name}! Добро пожаловать в сервис, разработанный для помощи ученикам кванториума!
             </Div>
+          </Group>
           }
         
         
-        <br/>
-        </Group>
+       
         <Group>
         <Example />
 
