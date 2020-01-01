@@ -51,12 +51,12 @@ const Home = ({ go, id, fetchedUser}) => (
         
         <br/>
         
-        {fetchedUser &&
-    <Group>
-     
-        {`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-      
-    </Group>}
+        { fetchedUser === true &&
+          <Div>
+              Привет, {fetchedUser.first_name}!
+            </Div>
+        }
+          
         
         
        
