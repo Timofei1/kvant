@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
@@ -18,7 +18,7 @@ import Icon28Game from '@vkontakte/icons/dist/28/game';
 import HorizontalScroll from '@vkontakte/vkui/dist/components/HorizontalScroll/HorizontalScroll';
 import Spinner from '@vkontakte/vkui/dist/components/Spinner/Spinner'
 import { Separator } from '@vkontakte/vkui';
-import { PanelHeaderBack, Epic, View, Switch, platform,  } from '@vkontakte/vkui';
+import { PanelHeaderBack, Epic, View, Switch, platform, ListItem, Avatar } from '@vkontakte/vkui';
 import PanelSpinner from '@vkontakte/vkui/dist/components/PanelSpinner/PanelSpinner';
 import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
 import Icon24Copy from '@vkontakte/icons/dist/24/copy';
@@ -26,9 +26,7 @@ import connect from '@vkontakte/vk-connect';
 import Example from './Example';
 
 
-
-const Home = ({ go, id, fetchedUser}) => (
-  
+const Home = ({go, id, fetchedUser}) => (
 
 
 <Panel id={id}>
@@ -49,14 +47,19 @@ const Home = ({ go, id, fetchedUser}) => (
           ><Icon28HelpOutline /></TabbarItem>
         </Tabbar>
         
-        <br/>
         
-        { fetchedUser === true &&
-          <Div>
-              Привет, {fetchedUser.first_name}!
-            </Div>
-        }
-          
+        
+        
+      {fetchedUser &&
+    <Group title="Ваш профиль:">
+      <ListItem
+        before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
+        description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
+      >
+        {`${fetchedUser.first_name} ${fetchedUser.last_name}`}
+      </ListItem>
+    </Group>}
+    
         
         
        
@@ -70,18 +73,18 @@ const Home = ({ go, id, fetchedUser}) => (
 
 
 
-
 Home.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
-	fetchedUser: PropTypes.shape({
-		photo_200: PropTypes.string,
-		first_name: PropTypes.string,
-		last_name: PropTypes.string,
-		city: PropTypes.shape({
-			title: PropTypes.string,
-		}),
-	}),
+    fetchedUser: PropTypes.shape({
+    photo_200: PropTypes.string,
+    first_name: PropTypes.string,
+    last_name: PropTypes.string,
+    city: PropTypes.shape({
+      title: PropTypes.string,
+    }),
+  }),
+
 };
 
 export default Home;
