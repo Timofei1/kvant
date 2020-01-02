@@ -46,23 +46,12 @@ const Home = ({go, id, fetchedUser}) => (
             data-to="persik1"
           ><Icon28HelpOutline /></TabbarItem>
         </Tabbar>
-        
-        
-        
-        
-      {fetchedUser &&
-    <Group title="Ваш профиль:">
-      <ListItem
-        before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-        description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-      >
-        {`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-      </ListItem>
-    </Group>}
-    
-        
-        
+       <Group>
+       <Div>
        
+       Привет, дорогой друг! Это приложение сделано для помощи ученикам кванториума! Удачного использования!
+       </Div>
+       </Group>
         <Group>
         <Example />
 
