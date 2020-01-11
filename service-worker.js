@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/kvant/precache-manifest.e1281aef66ffdd17e698462610b67507.js"
+  "/kvant/precache-manifest.1041040905fa8c51eb87458523fa0602.js"
 );
 
 self.addEventListener('message', (event) => {
