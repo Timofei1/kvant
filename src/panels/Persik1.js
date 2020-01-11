@@ -6,56 +6,63 @@ import Button from '@vkontakte/vkui/dist/components/Button/Button';
 import Tabbar from '@vkontakte/vkui/dist/components/Tabbar/Tabbar';
 import TabbarItem from '@vkontakte/vkui/dist/components/TabbarItem/TabbarItem';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
-import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
-import Tabs from '@vkontakte/vkui/dist/components/Tabs/Tabs';
-import TabsItem from '@vkontakte/vkui/dist/components/TabsItem/TabsItem';
-import Icon28MarketOutline from '@vkontakte/icons/dist/28/market_outline';
 import Icon28HelpOutline from '@vkontakte/icons/dist/28/help_outline';
-import Icon28SettingsOutline from '@vkontakte/icons/dist/28/settings_outline';
-import Icon28Game from '@vkontakte/icons/dist/28/game';
-import { platform, IOS, Search, Switch } from '@vkontakte/vkui';
-import HeaderButton from '@vkontakte/vkui/dist/components/HeaderButton/HeaderButton';
+import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
+import {platform, IOS, HeaderButton} from '@vkontakte/vkui';
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
-import Separator from '@vkontakte/vkui/dist/components/Separator/Separator';
-import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
+
+const osname = platform();
+
+const Persik1 = ({go, id, fetchedUser}) => (
 
 
-import persik from '../img/persik.png';
-import './Persik.css';
-
-const osName = platform();
-
-const Persik1 = ({ id, go, fetchedUser }) => (
-  <Panel id={id}>
-    <PanelHeader>
-    Информация
-    </PanelHeader>
+<Panel id={id}>
+		<PanelHeader
+        left={<HeaderButton onClick={go} data-to="home">
+				{osname === IOS ? <Icon28ChevronBack/> : <Icon24Back/>}
+			</HeaderButton>}
+		>
          
-    <Tabbar>
-          <TabbarItem fill="#0000FF"
+           Правила беседы</PanelHeader>
+		 <Tabbar>
+          <TabbarItem
             onClick={go}
             data-to="home"
-          ><Icon28MarketOutline  /></TabbarItem>
+          ><Icon28ArticleOutline fill="#0000FF" /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik"
-          ><Icon28ArticleOutline /></TabbarItem>
-          <TabbarItem
-            onClick={go}
-            data-to="persik1"
-          ><Icon28HelpOutline fill="#0000FF" /></TabbarItem>
+          ><Icon28HelpOutline /></TabbarItem>
         </Tabbar>
-       
-  </Panel>
+        
+        <Group>
+          <Div>
+          <h3>📔 У каждой официальной беседы есть свои правила, они нужны для поддержания порядка, с них и начнем:</h3>
+
+1.Мы не оскорбляем друг друга, наказание — <b>пред;</b><br/>
+2.Мы не используем нецензурную лексику, наказание — <b>пред;</b><br/>
+3.Мы не флудим, наказание — <b>пред;</b><br/>
+4.Мы не используем особые хештеги не по назначению, наказание — <b>пред;</b><br/>
+5.Мы не ставим фото группы эксперта на аватарку, наказание — <b>кик;</b><br/>
+6.Мы не просим ставить стрелочки на посты, наказание — <b>бан;</b><br/>
+7.Неадекватное, агрессивное поведение, наказание — <b>бан;</b><br/>
+8.Мы не скидываем ссылки на левые паблики и сайты, а также приглашения в свои чаты / беседы, наказание — <b>пред;</b><br/>
+9.Выдача себя за Администрацию в любой форме, наказание — <b>бан/кик (определяет Администратор);</b><br/>
+10.Мы не нарушаем правил сайта, наказание — <b>определяет Администратор.</b><br/>
+          </Div>
+        </Group>
+
+	</Panel>
 );
 
+
+
 Persik1.propTypes = {
-  id: PropTypes.string.isRequired,
-  go: PropTypes.func.isRequired,
-  fetchedUser: PropTypes.shape({
+	id: PropTypes.string.isRequired,
+	go: PropTypes.func.isRequired,
+    fetchedUser: PropTypes.shape({
     photo_200: PropTypes.string,
     first_name: PropTypes.string,
     last_name: PropTypes.string,
@@ -63,6 +70,7 @@ Persik1.propTypes = {
       title: PropTypes.string,
     }),
   }),
+
 };
 
 export default Persik1;

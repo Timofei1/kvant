@@ -6,58 +6,44 @@ import Button from '@vkontakte/vkui/dist/components/Button/Button';
 import Tabbar from '@vkontakte/vkui/dist/components/Tabbar/Tabbar';
 import TabbarItem from '@vkontakte/vkui/dist/components/TabbarItem/TabbarItem';
 import Group from '@vkontakte/vkui/dist/components/Group/Group';
-import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
-import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
-import Tabs from '@vkontakte/vkui/dist/components/Tabs/Tabs';
-import TabsItem from '@vkontakte/vkui/dist/components/TabsItem/TabsItem';
-import Icon28MarketOutline from '@vkontakte/icons/dist/28/market_outline';
 import Icon28HelpOutline from '@vkontakte/icons/dist/28/help_outline';
-import Icon28SettingsOutline from '@vkontakte/icons/dist/28/settings_outline';
-import Icon28Game from '@vkontakte/icons/dist/28/game';
-import { platform, IOS, Separator, Footer } from '@vkontakte/vkui';
-import HeaderButton from '@vkontakte/vkui/dist/components/HeaderButton/HeaderButton';
-import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
-import Icon24Back from '@vkontakte/icons/dist/24/back';
 import Icon28ArticleOutline from '@vkontakte/icons/dist/28/article_outline';
 
+const Persik = ({go, id, fetchedUser}) => (
 
-import persik from '../img/persik.png';
-import './Persik.css';
 
-const osName = platform();
-
-const Persik = ({ id, go, fetchedUser }) => (
-	<Panel id={id}>
-		<PanelHeader>Новости</PanelHeader>
-		<Tabbar>
-          <TabbarItem fill="#0000FF"
+<Panel id={id}>
+		<PanelHeader>Информация</PanelHeader>
+		 <Tabbar>
+          <TabbarItem
             onClick={go}
             data-to="home"
-          ><Icon28MarketOutline /></TabbarItem>
+          ><Icon28ArticleOutline  /></TabbarItem>
           <TabbarItem
             onClick={go}
             data-to="persik"
-          ><Icon28ArticleOutline fill="#0000FF" /></TabbarItem>
-          <TabbarItem
-            onClick={go}
-            data-to="persik1"
-          ><Icon28HelpOutline /></TabbarItem>
+          ><Icon28HelpOutline fill="#0000FF" /></TabbarItem>
         </Tabbar>
+        
+        
 	</Panel>
 );
+
+
 
 Persik.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
-	fetchedUser: PropTypes.shape({
-		photo_200: PropTypes.string,
-		first_name: PropTypes.string,
-		last_name: PropTypes.string,
-		city: PropTypes.shape({
-			title: PropTypes.string,
-		}),
-	}),
+    fetchedUser: PropTypes.shape({
+    photo_200: PropTypes.string,
+    first_name: PropTypes.string,
+    last_name: PropTypes.string,
+    city: PropTypes.shape({
+      title: PropTypes.string,
+    }),
+  }),
+
 };
 
 export default Persik;
