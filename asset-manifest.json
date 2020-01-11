@@ -1,18 +1,15 @@
 {
   "files": {
-    "main.css": "/kvant/static/css/main.981f7211.chunk.css",
-    "main.js": "/kvant/static/js/main.b89fde6e.chunk.js",
-    "main.js.map": "/kvant/static/js/main.b89fde6e.chunk.js.map",
+    "main.js": "/kvant/static/js/main.5cf014c1.chunk.js",
+    "main.js.map": "/kvant/static/js/main.5cf014c1.chunk.js.map",
     "runtime-main.js": "/kvant/static/js/runtime-main.3ad27b7e.js",
     "runtime-main.js.map": "/kvant/static/js/runtime-main.3ad27b7e.js.map",
     "static/css/2.2cfa1b23.chunk.css": "/kvant/static/css/2.2cfa1b23.chunk.css",
-    "static/js/2.aec3874e.chunk.js": "/kvant/static/js/2.aec3874e.chunk.js",
-    "static/js/2.aec3874e.chunk.js.map": "/kvant/static/js/2.aec3874e.chunk.js.map",
+    "static/js/2.572d0638.chunk.js": "/kvant/static/js/2.572d0638.chunk.js",
+    "static/js/2.572d0638.chunk.js.map": "/kvant/static/js/2.572d0638.chunk.js.map",
     "index.html": "/kvant/index.html",
-    "precache-manifest.3c8a4568597b58263cb39239fd73cf34.js": "/kvant/precache-manifest.3c8a4568597b58263cb39239fd73cf34.js",
+    "precache-manifest.e1281aef66ffdd17e698462610b67507.js": "/kvant/precache-manifest.e1281aef66ffdd17e698462610b67507.js",
     "service-worker.js": "/kvant/service-worker.js",
-    "static/css/2.2cfa1b23.chunk.css.map": "/kvant/static/css/2.2cfa1b23.chunk.css.map",
-    "static/css/main.981f7211.chunk.css.map": "/kvant/static/css/main.981f7211.chunk.css.map",
-    "static/media/persik.png": "/kvant/static/media/persik.4e1ec840.png"
+    "static/css/2.2cfa1b23.chunk.css.map": "/kvant/static/css/2.2cfa1b23.chunk.css.map"
   }
 }
