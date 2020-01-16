@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "bcfb80be482ac389096042b53f399bfd",
+    "revision": "7244a549c311a76b36990999cd046d4f",
     "url": "/kvant/index.html"
   },
   {
-    "revision": "3eb19fde3d95c1961b40",
+    "revision": "ce0ef4aa428061668531",
     "url": "/kvant/static/css/2.2cfa1b23.chunk.css"
   },
   {
-    "revision": "3eb19fde3d95c1961b40",
-    "url": "/kvant/static/js/2.54ea6bba.chunk.js"
+    "revision": "ce0ef4aa428061668531",
+    "url": "/kvant/static/js/2.c6daf892.chunk.js"
   },
   {
     "revision": "d705cb622423d72c5defbf368ca70dcc",
-    "url": "/kvant/static/js/2.54ea6bba.chunk.js.LICENSE"
+    "url": "/kvant/static/js/2.c6daf892.chunk.js.LICENSE"
   },
   {
-    "revision": "afb145bbfd8533930dd5",
-    "url": "/kvant/static/js/main.ba86843a.chunk.js"
+    "revision": "1c59c528625bfd889ef2",
+    "url": "/kvant/static/js/main.95b46774.chunk.js"
   },
   {
     "revision": "895b1d6de2bed57fc08c",
